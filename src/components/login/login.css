@@ -1,0 +1,41 @@
+p {
+    padding: 10px;
+}
+
+.welcome {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-weight: 600;
+    font-size: 150%;
+    font-family: 'Bradley Hand', cursive;
+  }
+
+.content {
+    font-size: 120%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+a {
+    color:rgb(128, 67, 5);
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px rgb(221, 199, 177) inset; /* Change the color to your own background color */
+}
+
+.error-style {
+    padding: 10px;
+    color: red;
+}
+
+
+.btn-color {
+    background-color: #9e7361;
+      color: white;
+      padding: 8px;
+      border-radius: 6px;
+      width: 150px;
+      border-color: transparent;
+  }

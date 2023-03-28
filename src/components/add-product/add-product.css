@@ -1,0 +1,82 @@
+p {
+  padding: 10px;
+}
+
+.welcome {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-weight: 600;
+  font-size: 150%;
+  font-family: 'Bradley Hand', cursive;
+}
+
+.content {
+  font-size: 120%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+a {
+  color:rgb(128, 67, 5);
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow:0 0 0 50px rgb(221, 199, 177) inset; /* Change the color to your own background color */
+}
+
+.error-style {
+  padding: 10px;
+  color: red;
+}
+
+.btn-remove-image {
+  position: absolute;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.dropzone {
+ height: 150px;
+ min-width: 100px;
+ display: table;
+ background-color: #eee;
+ width: 300px;
+ border: dashed 1px #aaa;
+ border-radius: 10px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
+
+.text-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.centered {
+  text-align: center;
+}
+
+.container-props {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.browse-button {
+  color:rgb(128, 67, 5);
+  cursor: pointer;
+}
+
+.image-props {
+  max-width: 75%;
+  max-height: 75%;
+  margin-top: 15%;
+}

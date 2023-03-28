@@ -1,0 +1,22 @@
+.welcome {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-weight: 600;
+    font-size: 150%;
+    font-family: 'Bradley Hand', cursive;
+  }
+
+.btn {
+    margin-top: 50px;
+}
+
+
+.btn-color {
+    background-color: #9e7361;
+      color: white;
+      padding: 8px;
+      border-radius: 6px;
+      width: 150px;
+      border-color: transparent;
+  }
