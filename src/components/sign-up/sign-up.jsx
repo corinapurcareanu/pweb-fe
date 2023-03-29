@@ -91,7 +91,7 @@ export const SignUp = () => {
 
     return (
         <><div className="welcome">
-            <h1>Please Log in!</h1>
+            <h1>Please Sign Up!</h1>
             </div>
             <Container maxWidth="sm" className="mt-5">
                 <Card style={{ padding: '20px' }}>                   
