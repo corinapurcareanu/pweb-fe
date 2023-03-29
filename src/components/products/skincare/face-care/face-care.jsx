@@ -37,7 +37,7 @@ export const FaceCare = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, " Day Cream, Face Mask, Night Cream")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, " Day cream, Face mask, Night cream")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

@@ -38,7 +38,7 @@ export const Hair = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Hair Brush, Hair Pins, Hair Tie, Hair Balm, Hair Mask, Hair Oil, Shampoo, Hair Gel, Hair Spray, Hair Wax")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Hair brush, Hair pins, Hair tie, Hair balm, Hair mask, Hair oil, Shampoo, Hair gel, Hair spray, Hair wax")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

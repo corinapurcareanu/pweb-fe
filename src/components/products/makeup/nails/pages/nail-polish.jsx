@@ -37,7 +37,7 @@ export const NailPolish = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Nail Polish")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Nail polish")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

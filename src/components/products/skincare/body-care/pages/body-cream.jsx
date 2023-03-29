@@ -37,7 +37,7 @@ export const BodyCream = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Body Cream")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Body cream")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {
@@ -67,7 +67,7 @@ export const BodyCream = () => {
     return (
         <Container>
               <div className="banner-img">
-                    <img src="https://www.long-time-liner-onlineshop.com/wp-content/uploads/2018/08/Lips_Nude_Pink-1.png" />
+                <img src="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-bottle-green-solid-color-background.jpg" />
                     <div className="top-left-title">Body Cream</div>
                     <div className="top-left-content">
                     Get the smooth, soft skin you've always wanted with our luxurious body creams! Our unique formula is designed to deeply nourish and hydrate your skin, leaving it feeling silky and supple all day long. 

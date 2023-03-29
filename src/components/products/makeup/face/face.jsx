@@ -37,7 +37,7 @@ export const Face = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Concelear, Face Powder, Foundation")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Concelear, Face powder, Foundation")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

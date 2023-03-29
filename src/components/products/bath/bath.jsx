@@ -37,7 +37,7 @@ export const Bath = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Bath Salt, Shower Gel, Shower Oil, Soap")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Bath salt, Shower gel, Shower oil, Soap")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

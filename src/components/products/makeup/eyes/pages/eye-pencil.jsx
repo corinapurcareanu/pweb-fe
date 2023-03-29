@@ -37,7 +37,7 @@ export const EyePencil = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Eye Pencil")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Eye pencil")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

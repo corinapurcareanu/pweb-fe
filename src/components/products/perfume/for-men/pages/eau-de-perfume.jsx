@@ -37,7 +37,7 @@ export const EauDePerfume = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Man Eau de Parfume")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Man eau de parfume")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {
@@ -67,7 +67,7 @@ export const EauDePerfume = () => {
     return (
         <Container>
               <div className="banner-img">
-                    <img src="https://www.long-time-liner-onlineshop.com/wp-content/uploads/2018/08/Lips_Nude_Pink-1.png" />
+                    <img src="https://i.ytimg.com/vi/R3unPcJDbCc/maxresdefault.jpg" />
                     <div className="top-left-title">Man Eau de Perfume</div>
                     <div className="top-left-content">
                     Elevate your grooming routine with our collection of men's eau de parfums. Crafted with the finest ingredients, each fragrance is a masterpiece in its own right, designed to captivate the senses and leave a lasting impression. Our eau de parfums offer a sophisticated and refined experience that is perfect for any occasion. Discover the power of scent and take your personal style to the next level.

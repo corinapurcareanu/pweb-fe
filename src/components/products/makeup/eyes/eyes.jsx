@@ -37,7 +37,7 @@ export const Eyes = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Eye Pencil, Eyeliner, False Lashes, Mascara, Make-up Palette")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Eye pencil, Eyeliner, False lashes, Mascara, Make-up palette")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

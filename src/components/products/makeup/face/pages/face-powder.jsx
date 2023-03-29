@@ -37,7 +37,7 @@ export const FacePowder = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Face Powder")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Face powder")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

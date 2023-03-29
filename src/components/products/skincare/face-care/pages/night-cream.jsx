@@ -37,7 +37,7 @@ export const NightCream = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Night Face Cream")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Night face cream")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {
@@ -67,7 +67,7 @@ export const NightCream = () => {
     return (
         <Container>
               <div className="banner-img">
-                    <img src="https://www.long-time-liner-onlineshop.com/wp-content/uploads/2018/08/Lips_Nude_Pink-1.png" />
+                    <img src="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-bottle-green-solid-color-background.jpg" />
                     <div className="top-left-title">Night Cream</div>
                     <div className="top-left-content">
                     Give your skin the nourishment it deserves with our luxurious face night cream. Infused with powerful antioxidants and hydrating ingredients, this cream deeply penetrates your skin to help regenerate and rejuvenate while you sleep. 

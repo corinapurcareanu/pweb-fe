@@ -37,7 +37,7 @@ export const EauDeToilette = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Man Eau de Toalette")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Man eau de toalette")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {
@@ -67,7 +67,7 @@ export const EauDeToilette = () => {
     return (
         <Container>
               <div className="banner-img">
-                    <img src="https://www.long-time-liner-onlineshop.com/wp-content/uploads/2018/08/Lips_Nude_Pink-1.png" />
+                    <img src="https://i.ytimg.com/vi/R3unPcJDbCc/maxresdefault.jpg" />
                     <div className="top-left-title">Man Eau de Toilette</div>
                     <div className="top-left-content">
                     Experience the timeless allure of our men's eau de toilette collection. Each fragrance is carefully crafted to embody the essence of modern masculinity, with bold and invigorating scents that evoke confidence and sophistication. With a range of notes from woody and spicy to fresh and citrusy, our eau de toilettes offer a scent for every mood and occasion. Elevate your everyday routine and exude confidence and style with our irresistible fragrances.

@@ -38,7 +38,7 @@ export const Perfume = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Man Eau de Parfume, Man Eau de Toalette, Woman Eau de Parfume, Woman Eau de Toalette")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Man eau de parfume, Man eau de toalette, Woman eau de parfume, Woman eau de toalette")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

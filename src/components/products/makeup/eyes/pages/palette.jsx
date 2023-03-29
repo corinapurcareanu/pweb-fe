@@ -37,7 +37,7 @@ export const Palette = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Make-up Palette")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Make-up palette")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

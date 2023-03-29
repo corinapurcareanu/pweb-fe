@@ -37,7 +37,7 @@ export const Eyebrows = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Eyebrows Gel, Eyebrows Pencil")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Eyebrows gel, Eyebrows pencil")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

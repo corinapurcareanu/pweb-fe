@@ -37,7 +37,7 @@ export const FaceMask = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Face Mask")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Face mask")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {
@@ -67,7 +67,7 @@ export const FaceMask = () => {
     return (
         <Container>
               <div className="banner-img">
-                    <img src="https://www.long-time-liner-onlineshop.com/wp-content/uploads/2018/08/Lips_Nude_Pink-1.png" />
+                    <img src="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-bottle-green-solid-color-background.jpg" />
                     <div className="top-left-title">Face Mask</div>
                     <div className="top-left-content">
                     Looking for a refreshing and rejuvenating addition to your skincare routine? Look no further than our luxurious face mask! Formulated with nourishing ingredients like hyaluronic acid and antioxidants, our face mask helps to deeply hydrate, soothe, and revitalize your skin. 

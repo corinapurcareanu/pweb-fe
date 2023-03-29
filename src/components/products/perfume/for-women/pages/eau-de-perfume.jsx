@@ -37,7 +37,7 @@ export const EauDePerfume = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Woman Eau de Parfume")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Woman eau de parfume")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {
@@ -67,7 +67,7 @@ export const EauDePerfume = () => {
     return (
         <Container>
               <div className="banner-img">
-                    <img src="https://www.long-time-liner-onlineshop.com/wp-content/uploads/2018/08/Lips_Nude_Pink-1.png" />
+                    <img src="https://i.ytimg.com/vi/R3unPcJDbCc/maxresdefault.jpg" />
                     <div className="top-left-title">Woman Eau de Perfume</div>
                     <div className="top-left-content">
                     Introducing a fragrance that embodies the spirit of the modern woman - confident, sophisticated, and elegant. Our eau de parfum features a captivating blend of floral and woody notes, leaving a lasting impression wherever she goes. Experience the ultimate expression of femininity with our exquisite fragrance.

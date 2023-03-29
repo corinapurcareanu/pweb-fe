@@ -131,6 +131,7 @@ export const ShowProductDetails = () => {
                         <th>Description</th>
                         <th>Discounted Price</th>
                         <th>Actual Price</th>
+                        <th>Type</th>
                         <th>Stock</th>
                         <th>Delivery Days</th>
                         <th>Actions</th>
@@ -141,6 +142,7 @@ export const ShowProductDetails = () => {
                                 <td>{p.productDescription}</td>
                                 <td>{p.productDiscountedPrice}</td>
                                 <td>{p.productActualPrice}</td>
+                                <td>{p.type}</td>
                                 <td>{p.productStock}</td>
                                 <td>{p.deliveryDays}</td>
                                 <td>

@@ -37,7 +37,7 @@ export const HairGel = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Hair Gel")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Hair gel")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

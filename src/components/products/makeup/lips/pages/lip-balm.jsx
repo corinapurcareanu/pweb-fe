@@ -37,7 +37,7 @@ export const LipBalm = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Lip Balm")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Lip balm")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

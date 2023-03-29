@@ -37,7 +37,7 @@ export const TopCoat = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Top Coat")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Top coat")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

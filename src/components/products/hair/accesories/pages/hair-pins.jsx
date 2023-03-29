@@ -37,7 +37,7 @@ export const HairPins = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Hair Pins")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Hair pins")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

@@ -38,7 +38,7 @@ export const MakeUp = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber,  "Make-up Brushes, Eyebrows Gel, Eyebrows Pencil, Eye Pencil, Eyeliner, False Lashes, Mascara, Make-up Palette, Concelear, Face Powder, Foundation, Gloss, Lip Balm, Lip Pencil, Lipstick, Nail Base, Nail Polish, Top Coat")
+            const productsResponse = await productService.getAllProductsByType(pageNumber,  "Make-up brushes, Eyebrows gel, Eyebrows pencil, Eye pencil, Eyeliner, False lashes, Mascara, Make-up palette, Concelear, Face powder, Foundation, Gloss, Lip balm, Lip pencil, Lipstick, Nail base, Nail polish, Top coat")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

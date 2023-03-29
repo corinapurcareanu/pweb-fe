@@ -37,7 +37,7 @@ export const DayCream = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Day Face Cream")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Day face cream")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {
@@ -67,7 +67,7 @@ export const DayCream = () => {
     return (
         <Container>
               <div className="banner-img">
-                    <img src="https://www.long-time-liner-onlineshop.com/wp-content/uploads/2018/08/Lips_Nude_Pink-1.png" />
+                    <img src="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-bottle-green-solid-color-background.jpg" />
                     <div className="top-left-title">Day Cream</div>
                     <div className="top-left-content">
                     Transform your skin with our face day cream! Infused with nourishing ingredients, our cream hydrates and protects your skin all day long. The lightweight formula ensures your skin looks and feels radiant without leaving any greasy residue. Try it now for a youthful, glowing complexion.

@@ -37,7 +37,7 @@ export const EauDeToilette = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Woman Eau de Toalette")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Woman eau de toalette")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {
@@ -67,7 +67,7 @@ export const EauDeToilette = () => {
     return (
         <Container>
               <div className="banner-img">
-                    <img src="https://www.long-time-liner-onlineshop.com/wp-content/uploads/2018/08/Lips_Nude_Pink-1.png" />
+                    <img src="https://i.ytimg.com/vi/R3unPcJDbCc/maxresdefault.jpg" />
                     <div className="top-left-title">Woman Eau de Toilette</div>
                     <div className="top-left-content">
                     Discover the perfect fragrance to express your unique personality and style with our collection of women's perfumes. From flirty and floral to sultry and seductive, our fragrances are carefully crafted to capture the essence of femininity and grace. 

@@ -38,7 +38,7 @@ export const Skincare = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber,  "Body Cream, Body Oil, Day Cream, Face Mask, Night Cream, Feet Care, Hands Care")
+            const productsResponse = await productService.getAllProductsByType(pageNumber,  "Body cream, Body oil, Day cream, Face mask, Night cream, Feet care, Hands care")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

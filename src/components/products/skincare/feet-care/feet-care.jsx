@@ -37,7 +37,7 @@ export const FeetCare = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "Feet Care")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "Feet care")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {

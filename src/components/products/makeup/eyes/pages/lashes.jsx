@@ -37,7 +37,7 @@ export const Lashes = () => {
         const imageProcessingService = new ImageProcessingService();
         try {
             console.log(pageNumber);
-            const productsResponse = await productService.getAllProductsByType(pageNumber, "False Lashes")
+            const productsResponse = await productService.getAllProductsByType(pageNumber, "False lashes")
           if(productsResponse.data.length === 12) {
             setShowNextPageButton(true);
            } else {
