@@ -145,6 +145,7 @@ export const SignUp = () => {
                         variant="outlined"
                         value={userPhoneNumber}
                         onChange={(event) => setUserPhoneNumber(event.target.value)}
+                        required
                         />
 
                         {phoneNumberWrongFormat && (

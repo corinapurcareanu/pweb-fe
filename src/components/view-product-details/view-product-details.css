@@ -37,6 +37,17 @@
      right: 0;
      margin: auto;
  }
+
+ .product-small-image {
+  max-width: 90%;
+  max-height: 90%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
  
  .btn-color {
      background-color: #9e7361;

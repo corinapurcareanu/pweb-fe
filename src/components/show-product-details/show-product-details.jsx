@@ -10,7 +10,7 @@ import { Image, Pencil, Trash } from 'phosphor-react';
 import ProductModal from './product-modal'
 import DeleteModal from './delete-modal'
 
-export const ShowProductDetails = () => {
+export const ShowProductDetails = ({setProduct}) => {
     const [productDetails, setProductDetails] = useState([]);
     const userAuthService = new UserAuthComponent();
     const [showPreviousPageButton, setShowPreviousPageButton] = useState(false);
@@ -35,6 +35,7 @@ export const ShowProductDetails = () => {
     }
 
     const handleShowDeleteModal = (product) => {
+        setDeleteApproval(false);
         setShowDeleteModal(true);
         setSelectedProduct(product);
     }
@@ -45,7 +46,8 @@ export const ShowProductDetails = () => {
     }
 
     const handleEdit = (product) => {
-      navigate('/add-product', { state: { product: product } });
+      setProduct(product)
+      navigate('/add-product');
     };
     const nextPage = (event) => {
         event.preventDefault();
@@ -114,7 +116,7 @@ export const ShowProductDetails = () => {
                         name="searchKey"
                         id="searchKey"
                         value={key}
-                        onChange={(event) => setKey(event.target.value)}
+                        onChange={(event) => {setKey(event.target.value); setPageNumber(0) }}
                     />
                     <button type="submit">
                         x

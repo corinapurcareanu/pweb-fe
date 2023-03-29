@@ -73,11 +73,12 @@ import { useState } from 'react';
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
+  const [product, setProduct] = useState('null');
 
   return (
     <div className="App">
         <Router>
-        <ProtectedRoutes  setCartCount={setCartCount}/>
+        <ProtectedRoutes  setCartCount={setCartCount} product={product} setProduct={setProduct}/>
           <Header cartCount={cartCount} setCartCount={setCartCount}/>
             <Routes>
               <Route path="/" element={<Home />}/>

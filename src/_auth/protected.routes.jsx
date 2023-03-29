@@ -8,16 +8,16 @@ import { OrderDetails } from '../components/order-details/order-details';
 import { AddProduct } from '../components/add-product/add-product';
 import { ShowProductDetails } from '../components/show-product-details/show-product-details';
 
-const ProtectedRoutes = ({ setCartCount }) => {
+const ProtectedRoutes = ({ setCartCount, product, setProduct } ) => {
     return (
       <Routes>
         <Route path="/order-confirmation" element={<PrivateRoute role={'user'} element={<OrderConfirmation />} />} />
-        <Route path="/place-order" element={<PrivateRoute role={'user'} element={<PlaceOrder />} />} />
+        <Route path="/place-order" element={<PrivateRoute role={'user'} element={<PlaceOrder setCartCount={ setCartCount }/>} />} />
         <Route path="/cart" element={<PrivateRoute role={'user'} element={<Cart setCartCount={setCartCount}/>} />} />
         <Route path="/my-orders" element={<PrivateRoute role={'user'} element={<MyOrders />} />} />
         <Route path="/show-all-orders" element={<PrivateRoute role={'admin'} element={<OrderDetails />} />} />
-        <Route path="/add-product" element={<PrivateRoute role={'admin'} element={<AddProduct />} />} />
-        <Route path="/show-product-details" element={<PrivateRoute role={['admin']} element={<ShowProductDetails />} />} />
+        <Route path="/add-product" element={<PrivateRoute role={'admin'} element={<AddProduct product={product} setProduct={setProduct}/>} />} />
+        <Route path="/show-product-details" element={<PrivateRoute role={['admin']} element={<ShowProductDetails setProduct={setProduct} />} />} />
       </Routes>
     );
   };

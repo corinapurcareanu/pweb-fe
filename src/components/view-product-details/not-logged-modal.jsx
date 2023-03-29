@@ -7,7 +7,9 @@ function NotLoggedModal({closeModal}) {
     return (
         <div className="modalContainer">
         <div className="titleCloseBtn">
+            <button onClick={closeModal}>
            x
+           </button>
         </div>
         <div className="body">
             Please <a href="/authenticate">log in</a> to add products to cart!

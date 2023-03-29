@@ -93,7 +93,7 @@ const handleHideNotLoggedModal = () => {
       <GridList cols={4} cellHeight="1:1" spacing={10}>
         {product?.productImages.map((file, i) => (
           <ImageListItem key={i} className="images">
-            <img src={file.url} alt="" onClick={(event) => changeIndex(event, i)} className="product-zoom-image" />
+            <img src={file.url} alt="" onClick={(event) => changeIndex(event, i)} className="product-small-image" />
           </ImageListItem>
         ))}
       </GridList>

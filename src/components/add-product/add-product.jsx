@@ -54,48 +54,21 @@ const useStyles = makeStyles({
   },
 });
 
-export const AddProduct = () => {
-  const location = useLocation();
-  const product = location.state && location.state.product;
-  console.log(product)
-
+export const AddProduct = ({product, setProduct}) => {
+ console.log(product)
+ const [id, setId] = useState(product?.id || '');
   const [productName, setProductName] = useState(product?.productName || '');
   const [productDescription, setProductDescription] = useState(product?.productDescription || '');
-  const [productDiscountedPrice, setProductDiscountedPrice] = useState(product?.productDiscountedPrice || '');
+  const [productDiscountedPrice, setProductDiscountedPrice] = useState(product?.productDiscoutedPrice || '');
   const [productActualPrice, setProductActualPrice] = useState(product?.productActualPrice || '');
   const [deliveryDays, setDeliveryDays] = useState(product?.deliveryDays || '');
   const [productStock, setProductStock] = useState(product?.productStock || '');
   const [type, setType] = useState(product?.type || '');
-  const [productImages, setProductImages] = useState( product?.productImages || []);
+  const [productImages, setProductImages] = useState(product?.productImages ||  []);
   const [imageNotFound, setImageNotFound] = useState(false);
   const classes = useStyles();
 
-  const setProduct = useCallback(async () => {
-   if(product === null) {
-      setProductName("");
-      setProductDescription("");
-      setProductDiscountedPrice("");
-      setProductActualPrice("");
-      setDeliveryDays("");
-      setType("");
-      setProductStock("");
-      setProductImages([]);
-   } else {
-    setProductName(product?.productName || '');
-    setProductDescription(product?.productDescription || '');
-    setProductDiscountedPrice(product?.productDiscountedPrice || '');
-    setProductActualPrice(product?.productActualPrice || '');
-    setDeliveryDays(product?.productDiscountedPrice || '');
-    setType(product?.type || '');
-    setProductStock(product?.productStock || '');
-    setProductImages(product?.productImages || []);
-   }
-  }, [product]);
-  
-  useEffect(() => {
-    setProduct();
-  }, [setProduct]);
-
+  setProduct(null);
 
     const productService = new ProductService();
     const userAuthService = new UserAuthComponent();
@@ -126,21 +99,24 @@ export const AddProduct = () => {
         setImageNotFound(true);
       } else {
         setImageNotFound(false);
-        const product = {
-          productName: productName,
-          productDescription: productDescription,
-          productDiscountedPrice: productDiscountedPrice,
-          productActualPrice: productActualPrice,
-          deliveryDays: deliveryDays,
-          type: type,
-          productStock: productStock
-        };
+        let product;
+
+        if(id !== '') {
+          product = {id: id, productName: productName, productDescription: productDescription,
+            productDiscountedPrice: productDiscountedPrice, productActualPrice: productActualPrice,
+            deliveryDays: deliveryDays, type: type, productStock: productStock}
+        } else {
+          product = {productName: productName, productDescription: productDescription,
+            productDiscountedPrice: productDiscountedPrice, productActualPrice: productActualPrice,
+            deliveryDays: deliveryDays, type: type, productStock: productStock}
+        }
     
         const convertedImages = await convertFilesUrl();
         console.log(convertedImages);
         productService.addNewProduct(product, convertedImages)
           .then((response) => {
             console.log(response);
+            setId("");
             setProductName("");
             setProductDescription("");
             setProductDiscountedPrice("");
@@ -219,7 +195,7 @@ export const AddProduct = () => {
 
     return (
         <><div className="welcome">
-              {product === null ? (
+              {productName ==='' ? (
                 <h1>Please add a product!</h1>
               ) :
               (<h1>Please update {productName}!</h1>
@@ -377,7 +353,7 @@ export const AddProduct = () => {
                                   </div>
                               )}
 
-                        {product === null ? (
+                        {productName === '' ? (
                               <Button variant="contained" className={classes.btnColor} type="submit">
                                 Add Product
                               </Button>

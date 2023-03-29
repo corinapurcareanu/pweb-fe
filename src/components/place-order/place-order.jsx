@@ -39,7 +39,7 @@ const useStyles = makeStyles({
     },
 });
 
-export const PlaceOrder = () => {
+export const PlaceOrder = ({ setCartCount }) => {
   const [cart, setCart] = useState([]);
   const [deliveryMethod, setDeliveryMethod] = useState(null);
   const [deliveryCost, setDeliveryCost] = useState(null);
@@ -78,8 +78,6 @@ export const PlaceOrder = () => {
     setNotEnoughStock([]);
     const productService = new ProductService();
 
-    allProductsInStock();
-
     if(!paid) {
       setNotPaid(true);
     }
@@ -93,12 +91,14 @@ export const PlaceOrder = () => {
     }
 
 
-    if(paid && deliveryMethod !== null && notEnoughStock.length === 0 && isStringOnlyDigits(orderContactNumber) &&
-    (orderAlternateContactNumber !== '' && isStringOnlyDigits(orderAlternateContactNumber))) {
+    if(paid && deliveryMethod !== null && allProductsInStock() && isStringOnlyDigits(orderContactNumber) &&
+    (orderAlternateContactNumber === '' || (orderAlternateContactNumber !== '' && isStringOnlyDigits(orderAlternateContactNumber)))) {
+      console.log(notEnoughStock.length);
         productService.placeOrder({ orderFullName: orderFullName, orderFullAddress: orderFullAddress,  orderContactNumber : orderContactNumber,
           orderAlternateContactNumber : orderAlternateContactNumber, deliveryCost : deliveryCost, cart: cart})
         .then((response) => {
           console.log(response);
+          setCartCount(0)
           navigate('/order-confirmation');
         })
         .catch((error) => {
@@ -163,14 +163,25 @@ export const PlaceOrder = () => {
     let found = []
     cart.forEach(
       (c) => {
+        console.log("stock" + c.product.productStock);
+        console.log("q inainte" + c.quantity);
         if(c.product.productStock < c.quantity) {
-          c.quantity = c.product.productStock;
+          //c.quantity = c.product.productStock;
           found.push({ productName: c.product.productName, quantity: c.quantity })
         }
+
+        console.log( "q dupa" + c.quantity);
       }
     );
 
+
     setNotEnoughStock(found);
+
+    if(found.length > 0) {
+      return false;
+    }
+
+    return true;
   }
 
   return (
@@ -369,8 +380,6 @@ export const PlaceOrder = () => {
                         {p.productName} - {p.quantity}
                         </div>
                     ))}
-                    <br></br>
-                    Your cart was updated to the maximum quantity available.
                     <br></br>
                     If you want to make any changes go back to <a href="/cart">your cart</a>.
               </div>
